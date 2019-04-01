@@ -1,0 +1,46 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 100px;
+	color:#333;	
+}
+@font-face{
+	font-family: 'pingfang-h';
+	src: url('../font/PingFangHeavy.ttf?#font-spider');
+}
+@font-face{
+	font-family: 'pingfang-l';
+	src: url('../font/PingFangLight.ttf?#font-spider');
+}
+@font-face{
+	font-family: 'pingfang-r';
+	src: url('../font/PingFangRegular.ttf?#font-spider')
+}
+@font-face{
+	font-family: 'pingfang-m';
+	src: url('../font/PingFangMedium.ttf?#font-spider')
+}
+@font-face{
+	font-family: 'sy-r';
+	src: url('../font/SystemSanFranciscoDisplayRegular.ttf?#font-spider')
+}
+/*reset*/
+body {font-family: pingfang-h,pingfang-l,pingfang-r,pingfang-m,sy-r;
+ margin: 0; padding: 0; -webkit-user-select: none;
+-webkit-text-size-adjust: none; outline: none; -webkit-tap-highlight-color: transparent;
+}
+input, textarea { -webkit-user-select: text;outline: none;}
+textarea::-webkit-resizer{display: none}
+input[type="number"]::-webkit-inner-spin-button{-webkit-appearance: none;}
+section, nav, article, aside, hgroup, header, footer { display: block }
+input, textarea, select, button, table { font-size: inherit; font-family: inherit; line-height: inherit }
+body, div, h2, h4, ul, li, dl, dt, dd, p { margin: 0; padding: 0 }
+img { border: none }
+ul, ol, li { list-style: none }
+i, em { font-style: normal }
+a { color: inherit; text-decoration: none }
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+display: block; }

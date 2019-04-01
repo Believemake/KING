@@ -1,0 +1,166 @@
+.warp{
+    width:100%;
+    box-sizing: border-box;
+    font-size: 0px;
+}
+.head{
+    width: 100%;
+    height:2.19rem;
+    position: absolute;
+    top: 0;
+    background:linear-gradient(to right,#D516FB,#9551F1);
+    z-index:111;
+    box-shadow:0 .02rem .1rem .02rem #ccc;
+}
+.head .head_nav{
+    height:1.11rem;
+    width:100%;
+    background:url('../img/xian.png') no-repeat center center;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.head .head_nav .nav{
+    height:.2rem;
+    width:100%;
+    box-sizing: border-box;
+    padding:0 .15rem;
+    overflow: hidden;
+    margin-top:.32rem;
+}
+.head .head_nav .nav a{
+    display: inline-block;
+}
+.head .head_nav .nav>a>img{
+    width:100%;
+    height:100%;
+  
+}
+.head .head_nav .nav a:first-child{
+    width:.09rem;
+    height:.17rem; 
+    float: left;
+}
+.head .head_nav .nav a:nth-child(2){
+    margin-top:.04rem;
+}
+.head .head_nav .nav span{
+    font-size: .17rem;
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    float: left;
+    margin-left:1.14rem;
+}
+.head .head_nav .nav .as{
+    width:.18rem;
+    height:.18rem;
+    float:right;
+    margin-left:.14rem;
+}
+.head .tou{
+    width:.8rem;
+    height:.8rem;
+    position: absolute;
+    top:.68rem;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 3333;
+}
+.head .tou>img{
+    width:100%;
+    height:100%;
+}
+/* 列表页 */
+.center{
+    width:100%;
+    box-sizing: border-box;
+    padding: 0 .15rem;
+    margin-top:2.19rem;
+}
+.center .top{
+    margin-top:1.74rem;
+    width:100%;
+    height:1.33rem;
+    border-radius:0 0 .1rem .1rem;
+    box-shadow: 0 0 .1rem .01rem rgba(203, 182, 230,0.5);
+}
+.center .top ul{
+    width:100%;
+   box-sizing:border-box;
+   padding: 0 .15rem;
+} 
+.center .top ul li{
+     height:.44rem;
+     width:100%;
+     overflow: hidden;
+     font-size: pingfang-m !important;
+}
+.center .top ul li span{
+ font-size: .14rem;
+    color: rgb(43, 38, 38);
+    font-weight: bold;
+    float: left;
+}
+.center .top ul li .spanc{
+    margin-top:.105rem;
+}
+.center .top ul li .spanb{
+    margin-left:.42rem;
+}
+.center .top ul li .spand{
+    margin-left:.58rem;
+}
+.center .top ul li img{
+    width:.13rem;
+    height:.13rem;
+}
+.center .top ul .lis{
+    border-bottom:.01rem solid#E8E8E8;
+}
+.center .top ul>li>.spana{
+margin:.12rem 0 0 .06rem;
+}
+/* 中间部分 */
+.con{
+    margin-top:.14rem;
+    width:100%;
+    height:1.9rem;
+    border-radius:.1rem;
+    color: #999999;
+    overflow: hidden;
+    font-weight:600;
+    box-shadow: 0 0 .1rem .01rem rgba(203, 182, 230,0.5);
+}
+.con ul li,.con p{
+    width:100%;
+}
+.con>.p2{
+    background: url('../img/xiala.png') no-repeat  right .3rem center;
+    background-size:.17rem .09rem;
+}
+.con>.p1{
+    overflow: hidden;
+    font-size:.15rem;
+    margin:.15rem 0 0 .15rem;
+    color:rgb(46, 37, 37);;
+}
+.con ul li{
+    font-size: .13rem;
+    margin-top:.12rem;
+    text-indent: .24rem;
+   background: url('../img/yuan.png') left .08rem center no-repeat;
+   background-size: .08rem .08rem;
+}
+.btn{
+    width:1.95rem;
+    height:.49rem;
+    line-height:.52rem;
+    text-align: center;
+    background: url('../img/yuanjiao.png') no-repeat;
+    background-size:100% 100%;
+    display: inline-block;
+    font-size: .18rem;
+    margin:.6rem 0 0 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}

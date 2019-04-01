@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.ruler-box{
+    font-size: 0;
+    text-align: center;
+    margin-top: 0.23rem;
+}
+
+.danwei{
+    font-size: 0.14rem;
+}
+#num {
+    background-image: -webkit-linear-gradient(bottom, #9650F1, #D517FB);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 0.24rem;
+}
+
+#ruler-container {
+    position: relative;
+    overflow: hidden;
+    width: 3.2rem;
+    height: 0.8rem;
+    border: 0.01rem solid #999999;
+    border-left: none;
+    width: 100%;
+    /* 旋转 */
+}
+
+#triangle {
+    width: 0.03rem;
+    height: 0.54rem;
+    background: linear-gradient(#9650F1,#D517FB);
+    margin: 0 auto;
+    z-index: 199;
+    position: relative;
+}
+#ruler ul {
+    -webkit-transform: translateX(1.9rem);
+    transform: translateX(1.9rem);
+    width: 16rem;
+    height: 0.64rem;
+    position: relative;
+    bottom: 0.27rem;
+}
+
+#ruler ul li {
+    width: 1.04rem;
+    height: 100%;
+    text-align: right;
+    background: url(./ruler.png) top left no-repeat;
+    background-size: 1rem auto;
+    float: left;
+    list-style: none;
+}
+
+#ruler ul li span {
+    position: relative;
+    top: 0.32rem;
+    right: -0.048rem;
+    font-size: 0.14rem;
+}

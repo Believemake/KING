@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>过渡页</title>
+    <link rel="stylesheet" href="css/firing.css">
+    <style>
+        @font-face {
+            font-family: pingfang-h;
+            src: url("./font/PingFang Heavy.ttf");
+        }
+        @font-face {
+            font-family: pingfang-l;
+            src: url("./font/PingFang Light.ttf");
+        }
+        @font-face {
+            font-family: pingfang-r;
+            src: url("./font/PingFang Regular.ttf");
+        }
+        @font-face {
+            font-family: pingfang-m;
+            src: url("./font/PingFang Medium.ttf");
+        }
+        body{
+            font-family: pingfang-h,pingfang-l,pingfang-r,pingfang-m;
+            margin: 0;padding: 0; -webkit-user-select: none;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="action">
+        <img src="image/002@2x.png" alt="" class="img_1">
+        <img src="image/you@2x.png" alt="" class="img_2">
+        <img src="image/zuo@2x.png" alt="" class="img_3">
+        <p>改变&nbsp;&nbsp;突破&nbsp;&nbsp;超越</p>
+    </div>
+</body>
+<script src="js/zepto.js"></script>
+<script src="js/zepto.touch.js"></script>
+<script src="js/rem.js"></script>
+<script>
+
+    // setTimeout(function(){
+    //     window.location.href='./guide/guide.html';
+    // },3000)
+    $('body').tap(function(){
+        window.location.href='./guide/guide.html';
+    })
+
+
+</script>
+</html>

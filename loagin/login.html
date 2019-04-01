@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录页</title>
+    <link rel="stylesheet" href="../css/res.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="warp">
+<div class="logo">
+<img src="login-img/jingg.png" alt="">
+</div>
+<div class="king">
+<img src="login-img/KING@2x.png" alt="">
+</div>
+<div class="logins">
+<form action=""  method="post">
+    <div>
+    <input type="text" placeholder="请输入手机号" maxlength="11" required oninvalid="setCustomValidity('手机号不能为空')"  pattern="^1[34578][0-9]{9}$">
+   </div>
+   <div>
+       <input type="password" placeholder="请输入密码" required  oninvalid="setCustomValidity('密码不能为空')"  pattern="^\w{6,18}$">
+   </div> 
+    <div class="zc-pwd"><a href="#">新用户注册</a> <a href="#">忘记密码？</a></div>
+    <div>
+        <button class="btn">登录</button>
+    </div>
+    <p class="san"><span></span><a href="#">第三方登录</a> <span></span> </p>
+</form>
+<div class="link">
+<a href="san_qq.html" class="a">
+<img src="login-img/qq2.png" alt="">
+</a>
+<a href="#" class="a">
+<img src="login-img/wechat2.png" alt="">
+</a>
+<a href="#" class="a">
+    <img src="login-img/weibo2.png" alt="">
+</a> 
+</div>
+</div>
+</div>
+</body>
+<script src="../js/zepto.js"></script>
+<script src="../js/zepto.touch.js"></script>
+<script src="../js/rem.js"></script>
+<script>
+    $('.btn').tap(function(){
+        window.location.href='../index.html';
+    })
+</script>
+</html>

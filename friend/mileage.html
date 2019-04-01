@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/res.css">
+    <link rel="stylesheet" href="./css/mileage.css">
+</head>
+
+<body>
+    <div id="box">
+        <div id="mengban">
+            <header>
+                <img src="./mileage.img/che.png" alt="">
+            </header>
+            <div class="box">
+                <p class="today">今日里程(公里)</p>
+                <p class="num slowNumber">68.53</p>
+                <p class="target">目标<span class="slowNumber">100</span>公里</p>
+                <span class="see"><a href="">查看总里程</a></span>
+                <div id="main"> </div>
+                <!-- <div class="blue"></div>
+                    <div class="purple"></div>
+                    <div class="fff"></div> -->
+            </div>
+            <div class="medal-box">
+                <ul class="medal">
+                    <li><img src="./mileage.img/qianbi.png" alt="">1900</li>
+                    <li><img src="./mileage.img/jiangbei.png" alt="">5个</li>
+                    <li><img src="./mileage.img/jiangpai.png" alt="">10枚</li>
+                </ul>
+            </div>
+            <div class="rank">恭喜您今天荣登好友圈第2名！</div>
+            <div class="content-box">
+                <ul class="content">
+                    <li class="item">
+                        <img src="./mileage.img/fire.png" alt="">
+                        <p class="item-num slowNumber">762.2</p>
+                        <p class="item-name">总消耗(大卡)</p>
+                        <canvas id="myCanvas1"   width="1.33rem"></canvas>
+                        <canvas id="myCanvas2"  width="1.33rem"></canvas>
+                    </li>
+                    <li class="item">
+                        <img src="./mileage.img/clock.png" alt="">
+                        <p class="item-num ">07'42</p>
+                        <p class="item-name">平均配速(千米/时)</p>
+                        <canvas id="myCanvas3"   width="1.33rem"></canvas>
+                        <canvas id="myCanvas4"  width="1.33rem"></canvas>
+                    </li>
+                </ul>
+                <span class="look"><a href="./ranking.html">查看王友排行榜 ></a></span>
+            </div>
+            <footer class="mnav">
+                <a href="../index.html">
+                    <img src="./mileage.img/foot1.png" alt="W">
+                    <p>主页</p>
+                </a>
+                <a href="#" class="imga">
+                    <img src="./mileage.img/foot2.png" alt="W">
+                    <p>成绩</p>
+                </a>
+                <a href="./diom-wy-.html">
+                    <img src="./mileage.img/foot3.png" alt="W">
+                    <p>王友圈</p>
+                </a>
+                <a href="./friend-list.html">
+                    <img src="./mileage.img/foot4.png" alt="W">
+                    <p>好友</p>
+                </a>
+                <a href="./diomw.html">
+                    <img src="./mileage.img/foot5.png" alt="W">
+                    <p>我</p>
+                </a>
+            </footer>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../js/zepto.js"></script>
+<script src="../js/fx.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../js/echarts.js"></script>
+<script src="./js/slowNumber.js"></script>
+
+<script>
+    // var show = setTimeout(function () {
+    //     $('.blue').show()
+    // }, 0)
+    // var show1 = setTimeout(function () {
+    //     $('.purple').show()
+    // }, 250)
+    // var show2 = setTimeout(function () {
+    //     $('.fff').show();
+    // }, 450)
+
+
+
+
+
+
+
+    var myChart = echarts.init(document.getElementById('main'));
+    var option = {
+
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            // data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+        },
+        series: [{
+            name: '访问来源',
+            type: 'pie',
+            startAngle: 220,
+            color: [new echarts.graphic.LinearGradient(
+                1, 0, 0, 1,
+                [{
+                        offset: 0,
+                        color: '#F308F6'
+                    },
+
+                    {
+                        offset: 1,
+                        color: '#32CDDC'
+                    }
+                ]
+            ), '#fff', 'rgba(255,255,255,0)'],
+            radius: ['90%', '80%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: true,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: false,
+                    textStyle: {
+                        fontSize: '60',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data: [{
+                    value: 50,
+                },
+                {
+                    value: 22,
+                },
+                {
+                    value: 28,
+                }
+            ]
+        }]
+    }
+    myChart.setOption(option);
+</script>
+<script>
+    function resize() {
+        var canvas1 = document.getElementById('myCanvas1'); 
+        canvas1.width = window.innerWidth; 
+        var canvas2 = document.getElementById('myCanvas2'); 
+        canvas2.width = window.innerWidth; 
+    }    
+    window.onresize = function() {
+        resize();
+    }    
+    resize();    ;
+    (function() {        
+        wave1();    
+        wave2();           
+    })();     /* 第一条 */     
+    function wave1() {  
+        var waveWidth = 3300,
+                    offset = 0,
+                    waveHeight = 15,
+              //波浪高度
+                    waveCount = 5,
+              //波浪个数
+                    startX = -1000,
+                    startY = 200,
+              //canvas 高度
+                    progress = 110,
+              //波浪位置的高度
+                    d2 = waveWidth / waveCount,
+                    d = d2 / 2,
+                    hd = d / 2,
+                    c = document.getElementById("myCanvas1"),
+                    ctx = c.getContext("2d");      
+        function tick() {        
+            offset -= 5;        
+            if (-1 * offset === d2) offset = 0;        
+            ctx.clearRect(0, 0, c.width, c.height);        
+            ctx.fillStyle = '#32CDDC';         
+            ctx.beginPath();        
+            var offsetY = startY - progress;        
+            ctx.moveTo(startX - offset, offsetY);        
+            for (var i = 0; i < waveCount; i++) {          
+                var dx = i * d2;          
+                var offsetX = dx + startX - offset;          
+                ctx.quadraticCurveTo(offsetX + hd, offsetY + waveHeight, offsetX + d, offsetY);          
+                ctx.quadraticCurveTo(offsetX + hd + d, offsetY - waveHeight, offsetX + d2, offsetY);        
+            }        
+            ctx.lineTo(startX + waveWidth, 3000);        
+            ctx.lineTo(startX, 3000);        
+            ctx.fill();                 
+            setTimeout(tick, 1500 / 60);   //速度
+                     //requestAnimationFrame(tick);
+                  
+        }      
+        tick();  
+    }      /* 第二条 */     
+    function wave2() {  
+        var waveWidthB = 3300,
+                    offsetB = 0,
+                    waveHeightB = 30,
+              //波浪高度
+                    waveCountB = 4,
+              //波浪个数
+                    startXB = -1000,
+                    startYB = 200,
+              //canvas 高度
+                    progressB = 105,
+              //波浪位置的高度
+                    d2B = waveWidthB / waveCountB,
+                    dB = d2B / 2,
+                    hdB = dB / 2,
+                    cB = document.getElementById("myCanvas2"),
+                    ctxB = cB.getContext("2d");      
+        function tickB() {        
+            offsetB -= 5;        
+            if (-1 * offsetB === d2B) offsetB = 0;        
+            ctxB.clearRect(0, 0, cB.width, cB.height);        
+            ctxB.fillStyle = 'rgba(174,49,248)';         
+            ctxB.beginPath();        
+            var offsetYB = startYB - progressB;         
+            ctxB.moveTo(startXB - offsetB, offsetYB);        
+            for (var i = 0; i < waveCountB; i++) {          
+                var dxB = i * d2B;          
+                var offsetXB = dxB + startXB - offsetB;          
+                ctxB.quadraticCurveTo(offsetXB + hdB, offsetYB + waveHeightB, offsetXB + dB, offsetYB);          
+                ctxB.quadraticCurveTo(offsetXB + hdB + dB, offsetYB - waveHeightB, offsetXB + d2B, offsetYB);        
+            }        
+            ctxB.lineTo(startXB + waveWidthB, 3000);        
+            ctxB.lineTo(startXB, 3000);        
+            ctxB.fill();                 
+            setTimeout(tickB, 5000 / 60); //速度
+                     //requestAnimationFrame(tick);
+                  
+        }      
+        tickB();  
+    }
+</script>
+<script>
+    function resize() {
+        var canvas1 = document.getElementById('myCanvas3'); 
+        canvas1.width = window.innerWidth; 
+        var canvas2 = document.getElementById('myCanvas4'); 
+        canvas2.width = window.innerWidth; 
+    }    
+    window.onresize = function() {
+        resize();
+    }    
+    resize();    ;
+    (function() {        
+        wave1();    
+        wave2();           
+    })();     /* 第一条 */     
+    function wave1() {  
+        var waveWidth = 3300,
+                    offset = 0,
+                    waveHeight = 15,
+              //波浪高度
+                    waveCount = 5,
+              //波浪个数
+                    startX = -1000,
+                    startY = 200,
+              //canvas 高度
+                    progress = 110,
+              //波浪位置的高度
+                    d2 = waveWidth / waveCount,
+                    d = d2 / 2,
+                    hd = d / 2,
+                    c = document.getElementById("myCanvas3"),
+                    ctx = c.getContext("2d");      
+        function tick() {        
+            offset -= 5;        
+            if (-1 * offset === d2) offset = 0;        
+            ctx.clearRect(0, 0, c.width, c.height);        
+            ctx.fillStyle = '#32CDDC';         
+            ctx.beginPath();        
+            var offsetY = startY - progress;        
+            ctx.moveTo(startX - offset, offsetY);        
+            for (var i = 0; i < waveCount; i++) {          
+                var dx = i * d2;          
+                var offsetX = dx + startX - offset;          
+                ctx.quadraticCurveTo(offsetX + hd, offsetY + waveHeight, offsetX + d, offsetY);          
+                ctx.quadraticCurveTo(offsetX + hd + d, offsetY - waveHeight, offsetX + d2, offsetY);        
+            }        
+            ctx.lineTo(startX + waveWidth, 3000);        
+            ctx.lineTo(startX, 3000);        
+            ctx.fill();                 
+            setTimeout(tick, 1500 / 60);   //速度
+                     //requestAnimationFrame(tick);
+                  
+        }      
+        tick();  
+    }      /* 第二条 */     
+    function wave2() {  
+        var waveWidthB = 3300,
+                    offsetB = 0,
+                    waveHeightB = 30,
+              //波浪高度
+                    waveCountB = 4,
+              //波浪个数
+                    startXB = -1000,
+                    startYB = 200,
+              //canvas 高度
+                    progressB = 105,
+              //波浪位置的高度
+                    d2B = waveWidthB / waveCountB,
+                    dB = d2B / 2,
+                    hdB = dB / 2,
+                    cB = document.getElementById("myCanvas4"),
+                    ctxB = cB.getContext("2d");      
+        function tickB() {        
+            offsetB -= 5;        
+            if (-1 * offsetB === d2B) offsetB = 0;        
+            ctxB.clearRect(0, 0, cB.width, cB.height);        
+            ctxB.fillStyle = 'rgba(174,49,248)';         
+            ctxB.beginPath();        
+            var offsetYB = startYB - progressB;         
+            ctxB.moveTo(startXB - offsetB, offsetYB);        
+            for (var i = 0; i < waveCountB; i++) {          
+                var dxB = i * d2B;          
+                var offsetXB = dxB + startXB - offsetB;          
+                ctxB.quadraticCurveTo(offsetXB + hdB, offsetYB + waveHeightB, offsetXB + dB, offsetYB);          
+                ctxB.quadraticCurveTo(offsetXB + hdB + dB, offsetYB - waveHeightB, offsetXB + d2B, offsetYB);        
+            }        
+            ctxB.lineTo(startXB + waveWidthB, 3000);        
+            ctxB.lineTo(startXB, 3000);        
+            ctxB.fill();                 
+            setTimeout(tickB, 5000 / 60); //速度
+                     //requestAnimationFrame(tick);
+                  
+        }      
+        tickB();  
+    }
+</script>

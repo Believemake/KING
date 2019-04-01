@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>场馆详情</title>
+    <link rel="stylesheet" href="../css/res.css">
+    <link rel="stylesheet" href="./css/Venue-details.css">
+</head>
+
+<body>
+    <div id="box">
+        <header>
+            <p><a href="./site.html"><img src="./Venue-details/fanhui.png" alt=""></a><span>场馆详情</span></p>
+        </header>
+        <!-- ********* -->
+        <div class="venue-title">
+            <div class="venue-img">
+                <img src="./Venue-details/venue.png" alt="">
+            </div>
+            <div class="venue-content">
+                <p class="venue-name">完美动力 <img src="./Venue-details/xing.png" alt=""></p>
+                <p>分类：羽毛球</p>
+                <p>价格：<span class="price">￥1500/月</span></p>
+                <p class="add"><img src="./Venue-details/add.png" alt="">北京市朝阳区 <span>1.1km</span></p>
+            </div>
+        </div>
+        <div class="day">
+            <ul class="day-list">
+                <li>
+                    <p>今天</p>
+                    <p>3月26日</p>
+                    <div><a href="">预约</a></div>
+                </li>
+                <li>
+                    <p>周三</p>
+                    <p>3月27日</p>
+                    <div><a href="">预约</a></div>
+                </li>
+                <li>
+                    <p>周四</p>
+                    <p>3月28日</p>
+                    <div><a href="">预约</a></div>
+                </li>
+                <li>
+                    <p>周五</p>
+                    <p>3月29日</p>
+                    <div><a href="">预约</a></div>
+                </li>
+                <li>
+                    <p>周六</p>
+                    <p>3月30日</p>
+                    <div><a href="">预约</a></div>
+                </li>
+                <li>
+                    <p>周日</p>
+                    <p>3月31日</p>
+                    <div><a href="">预约</a></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="location">
+            <p>场馆定位图</p>
+            <div class="warp" id="allmap">
+                <!-- <img src="./Venue-details/index.png" alt=""> -->
+            </div>
+        </div>
+        <div class="evaluate">
+            <p>评价（3652）</p>
+            <div class="user">
+                <div class="user-img">
+                    <img src="./Venue-details/touxiang.png" alt="">
+                </div>
+                <div class="user-name">
+                    <p class="name">香叶</p>
+                    <p class="time">13:35</p>
+                </div>
+            </div>
+            <div class="eva-text">
+                <p>第一次来这个地方玩，地方还挺好找的，场地很宽阔不错！</p>
+                <span><a href="">查看23条评论</a></span>
+            </div>
+            <div class="user">
+                <div class="user-img">
+                    <img src="./Venue-details/touxiang.png" alt="">
+                </div>
+                <div class="user-name">
+                    <p class="name">香叶</p>
+                    <p class="time">13:35</p>
+                </div>
+            </div>
+            <div class="eva-text">
+                <p>第一次来这个地方玩，地方还挺好找的，场地很宽阔不错！</p>
+                <span><a href="">查看23条评论</a></span>
+            </div>
+        </div>
+
+        <footer>
+            <div class="serve">
+                <div>
+                    <a href="">
+                        <img src="./Venue-details/kefu.png" alt="">
+                        <p>客服</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="./Venue-details/shoucang.png" alt="">
+                        <p>收藏</p>
+                    </a>
+                </div>
+            </div>
+            <div class="join">
+                <div>
+                    <a href="#">加入购物车</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
+<script src="../js/zepto.js"></script>
+<script src="../js/rem.js"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=Qpi2ANnlzYAPlFFsrym5UDzO1Vsqosld" type="text/javascript"></script>
+<script type="text/javascript">
+
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");    // 创建Map实例
+    var point = new BMap.Point(116.404, 39.915);
+    map.centerAndZoom(point, 11);  // 初始化地图,设置中心点坐标和地图级别
+    setTimeout(function () {
+        map.setZoom(14);
+    }, 2000);  //2秒后放大到14级
+    map.enableScrollWheelZoom(true);
+    //添加地图类型控件
+    map.addControl(new BMap.MapTypeControl({
+        mapTypes: [
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+        ]
+    }));
+    map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    var geolocation = new BMap.Geolocation();
+    geolocation.getCurrentPosition(function (r) {
+        if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+            var mk = new BMap.Marker(r.point);
+            map.addOverlay(mk);
+            map.panTo(r.point);
+            // alert('您的位置：'+r.point.lng+','+r.point.lat);
+        }
+        else {
+            alert('failed' + this.getStatus());
+        }
+    }, { enableHighAccuracy: true })
+	//关于状态码
+	//BMAP_STATUS_SUCCESS	检索成功。对应数值“0”。
+	//BMAP_STATUS_CITY_LIST	城市列表。对应数值“1”。
+	//BMAP_STATUS_UNKNOWN_LOCATION	位置结果未知。对应数值“2”。
+	//BMAP_STATUS_UNKNOWN_ROUTE	导航结果未知。对应数值“3”。
+	//BMAP_STATUS_INVALID_KEY	非法密钥。对应数值“4”。
+	//BMAP_STATUS_INVALID_REQUEST	非法请求。对应数值“5”。
+	//BMAP_STATUS_PERMISSION_DENIED	没有权限。对应数值“6”。(自 1.1 新增)
+	//BMAP_STATUS_SERVICE_UNAVAILABLE	服务不可用。对应数值“7”。(自 1.1 新增)
+	//BMAP_STATUS_TIMEOUT	超时。对应数值“8”。(自 1.1 新增)
+</script>
+<script>
+    (function () {
+        var el = document.querySelector('.day-list');
+        var startPosition, endPosition, deltaX, deltaY, moveLength;
+        var marginNum=0;
+
+        el.addEventListener('touchstart', function (e) {
+            var touch = e.touches[0];
+            startPosition = {
+                x: touch.clientX,
+                // y: touch.pageY
+            }
+        });
+
+        el.addEventListener('touchmove', function (e) {
+            var touch = e.touches[0];
+            endPosition = {
+                x: touch.clientX,
+                // y: touch.pageY
+            }
+
+            deltaX = endPosition.x - startPosition.x;
+            // deltaY = endPosition.y - startPosition.y;
+            // moveLength = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(Math.abs(deltaY), 2));
+            console.log(endPosition,startPosition);
+            if(deltaX>0){
+                el.style.marginLeft = marginNum+deltaX+'px';
+            }else if(deltaX<0){
+                el.style.marginLeft = marginNum+deltaX+'px';
+            }
+
+        });
+        el.addEventListener('touchend',function(){
+            marginNum = marginNum+deltaX;
+        })
+        
+    })();
+</script>

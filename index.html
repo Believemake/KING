@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/res.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="warp">
+        <header class="head">
+        <div class="nav">
+            <a href="#" class="add"><span>北京</span><img src="imgs/xiala.png" alt=""></a>
+            <input type="text" placeholder="搜索">
+            <a href="#" class="xin_msg">
+                <img src="imgs/msg.png" alt="@">
+            </a>
+        </div>
+        </header>
+        <section class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="imgs/banner.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/b1.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/b2.png" alt="" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="list_msg">
+            <a href="./coach/Aboutcoach.html">
+                 <img src="imgs/ic1.png" alt="">
+                <p>预约教练</p>
+            </a>
+            <a href="./Venue/site.html">
+                <img src="imgs/ic2.png" alt="">
+                <p>预约场馆</p>
+            </a>
+            <a href="./product/power.html">
+                <img src="imgs/ic3.png" alt="">
+                <p>动力产品</p>
+            </a>
+            <a href="./Venue/activity.html">
+                <img src="imgs/ic4.png" alt="">
+                <p>王友活动</p>
+            </a>
+        </section>
+        <div class="hot">
+            <h3 class="h3s"><span class="hotspn"></span><span>热门活动</span> <span class="more">更多</span></h3>
+            <ul class="hots">
+                <li>
+                    <p>天天跑步大排行</p>
+                    <p>1212人参加</p>
+                </li>
+                <li>
+                    <p>7天急速健身计划</p>
+                    <p>2133人参加</p>
+                </li>
+                <li>
+                    <p>3天急速健身计划</p>
+                    <p>2133人参加</p>
+                </li>
+                <li>
+                    <p>3天急速健身计划</p>
+                    <p>2133人参加</p>
+                </li>
+                <li>
+                    <p>3天急速健身计划</p>
+                    <p>2133人参加</p>
+                </li>
+                <li>
+                    <p>3天急速健身计划</p>
+                    <p>2133人参加</p>
+                </li>
+            </ul>
+        </div>
+        <div class="recommend">
+            <h3 class="h3s"><span class="hotspn"></span><span>推荐场馆</span><span class="more">更多</span></h3>
+            <ul class="list">
+                <li>
+                    <p>3天急速健身计划</p>
+                    <p>2133人参加</p>
+                </li>
+                <li>
+                    <p>3天急速健身计划</p>
+                    <p>2133人参加</p>
+                </li>
+                <li>
+                    <p>3天急速健身计划</p>
+                    <p>2133人参加</p>
+                </li>
+                <li>
+                    <p>3天急速健身计划</p>
+                    <p>2133人参加</p>
+                </li>
+                <li>
+                    <p>3天急速健身计划</p>
+                    <p>2133人参加</p>
+                </li>
+                <li>
+                    <p>3天急速健身计划</p>
+                    <p>2133人参加</p>
+                </li>
+            </ul>
+        </div>
+        <footer class="mnav">
+           <a href="#" class="imga">
+               <img src="imgs/shand.png" alt="W">
+               <p>主页</p>
+           </a>
+            <a href="./friend/mileage.html">
+                <img src="imgs/you.png" alt="W">
+                <p>成绩</p>
+            </a>
+            <a href="./friend/diom-wy-.html">
+                <img src="imgs/diqiou.png" alt="W">
+                <p>王友圈</p>
+            </a>
+            <a href="./friend/friend-list.html">
+                <img src="imgs/lanq.png" alt="W">
+                <p>好友</p>
+            </a>
+            <a href="./friend/diomw.html">
+                <img src="imgs/jinggang.png" alt="W">
+                <p>我</p>
+            </a>
+        </footer>
+    </div>
+</body>
+<script src="js/zepto.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/zepto.touch.js"></script>
+<script>
+    var Swiper = new Swiper(".swiper-container", {
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction:false
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        }
+    });
+// var $uls=$('.hots');
+// var timer=null;
+//     var left = 0;
+// $($uls).on('swipeLeft',function(){ 
+//         --left;
+//     $(this).css(' margin-left',+left+"rem");
+// })
+//     $($uls).on('swipeRight', function () {
+//         left++;
+//         $(this).css(' margin-left', +left+ "rem");
+//     })
+    (function () {
+        var el = document.querySelector('.hots');
+        var startPosition, endPosition, deltaX, deltaY, moveLength;
+        var marginNum = 0;
+
+        el.addEventListener('touchstart', function (e) {
+            var touch = e.touches[0];
+            startPosition = {
+                x: touch.pageX,
+                y: touch.pageY
+            }
+        });
+
+        el.addEventListener('touchmove', function (e) {
+            var touch = e.touches[0];
+            endPosition = {
+                x: touch.pageX,
+                y: touch.pageY
+            }
+
+            deltaX = endPosition.x - startPosition.x;
+            // deltaY = endPosition.y - startPosition.y;
+            // moveLength = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(Math.abs(deltaY),2));
+            // console.log(moveLength);
+            console.log(endPosition,startPosition);
+            if(deltaX>0){
+                el.style.marginLeft = (marginNum+deltaX)+'px';
+            }else if(deltaX<0){
+                el.style.marginLeft = marginNum+deltaX+'px';
+            }
+        });
+        el.addEventListener('touchend',function(){
+            marginNum = marginNum+deltaX;
+        })
+
+    })();
+
+
+
+
+
+
+
+</script>
+
+</html>

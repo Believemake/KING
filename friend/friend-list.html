@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/res.css">
+    <link rel="stylesheet" href="./css/friend-list.css">
+</head>
+
+<body>
+    <div id="friend">
+        <header>
+            <div class="header-top">
+                <a href="../index.html"><img src="./friends-list-imgs/fanhui.png" alt=""></a>
+                <span>好友列表</span>
+                <a href="./diom-fjhy.html"><img src="./friends-list-imgs/jiahaoyou.png" alt=""></a>
+            </div>
+            <div class="header-bottom">
+                <a href="">通讯录</a>
+                <input type="text">
+                <a href="">更多</a>
+                <a href=""><img src="./friends-list-imgs/gengduo.png" alt=""></a>
+            </div>
+        </header>
+        <div>
+            <ul class="friend-list">
+                <li class="content">
+                    <div class="touxiang">
+                        <img src="./friends-list-imgs/touxiang6.png" alt="">
+                    </div>
+                    <div class="item">
+                        <p><span class="name">金刚芭比</span><span class="time">16:01</span></p>
+                        <p>我不会游泳谁教我啊</p>
+                    </div>
+                    <button class="remove">删除 </button>
+                </li>
+                <li class="content">
+                    <div class="touxiang">
+                        <img src="./friends-list-imgs/touxiang1.png" alt="">
+                    </div>
+                    <div class="item">
+                        <p><span class="name">隔壁同桌</span><span class="time">06:53</span></p>
+                        <p>晚上游泳啊</p>
+                    </div>
+                    <button class="remove">删除 </button>
+                </li>
+                <li class="content">
+                    <div class="touxiang">
+                        <img src="./friends-list-imgs/touxiang2.png" alt="">
+                    </div>
+                    <div class="item">
+                        <p><span class="name">柠檬果</span><span class="time">23:10</span></p>
+                        <p>你同桌说晚上游泳去吗？</p>
+                    </div>
+                    <button class="remove">删除 </button>
+                </li>
+                <li class="content">
+                    <div class="touxiang">
+                        <img src="./friends-list-imgs/touxiang3.png" alt="">
+                    </div>
+                    <div class="item">
+                        <p><span class="name">小新小新</span><span class="time">08:08</span></p>
+                        <p>都来啊</p>
+                    </div>
+                    <button class="remove">删除 </button>
+                </li>
+                <li class="content">
+                    <div class="touxiang">
+                        <img src="./friends-list-imgs/touxiang4.png" alt="">
+                    </div>
+                    <div class="item">
+                        <p><span class="name">我们不一样</span><span class="time">12:23</span></p>
+                        <p>我肯定去啊</p>
+                    </div>
+                    <button class="remove">删除 </button>
+                </li>
+                <li class="content">
+                    <div class="touxiang">
+                        <img src="./friends-list-imgs/touxiang5.png" alt="">
+                    </div>
+                    <div class="item">
+                        <p><span class="name">肌肉男</span><span class="time">16:39</span></p>
+                        <p>看谁压得水花大</p>
+                    </div>
+                    <button class="remove">删除 </button>
+                </li>
+
+            </ul>
+        </div>
+        <footer class="mnav">
+            <a href="../index.html">
+                <img src="./mileage.img/foot1.png" alt="W">
+                <p>主页</p>
+            </a>
+            <a href="./mileage.html">
+                <img src="./friends-list-imgs/foot2.png" alt="W">
+                <p>成绩</p>
+            </a>
+            <a href="./diom-wy-.html">
+                <img src="./mileage.img/foot3.png" alt="W">
+                <p>王友圈</p>
+            </a>
+            <a href="./friend-list.html" class="imga">
+                <img src="./friends-list-imgs/foot4.png" alt="W">
+                <p>好友</p>
+            </a>
+            <a href="./diomw.html">
+                <img src="./mileage.img/foot5.png" alt="W">
+                <p>我</p>
+            </a>
+        </footer>
+    </div>
+</body>
+
+</html>
+<script src="../js/zepto.js"></script>
+<script src="../js/zepto.touch.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../js/doT.js"></script>
+
+<!-- <script id="friend-list" type="text/x-dot-template">
+    {{~it:value:index}}
+        <li class="content">
+            <div class="touxiang">
+                <img src="{{=value.img}}" alt="">
+            </div>
+            <div class="item">
+                <p><span class="name">{{=value.name}}</span><span class="time">{{=value.time}}</span></p>
+                <p>{{=value.text}}</p>
+            </div>
+        </li>
+    {{~}}
+</script>
+<script>
+    $.ajax({
+        url: '../json/friend-list.json',
+        dataType: 'json',
+        type: 'get',
+        success: function (res) {
+            var friends = doT.template($('#friend-list').text());
+            $('.friend-list').html(friends(res));
+        }
+    })
+</script> -->
+<script>
+    $('.touxiang').tap(function () {
+        window.location.href = './Flistdetails.html'
+    })
+    $('.name').tap(function () {
+        window.location.href = './Flistdetails.html'
+    })
+    $('.content').swipeLeft(function () {
+        $(this).find('.remove').show();
+    })
+    $('.content').swipeRight(function () {
+        $(this).find('.remove').hide();
+    })
+    $('.remove').tap(function () {
+        $(this).parent().remove();
+    })
+</script>

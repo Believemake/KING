@@ -1,0 +1,315 @@
+.warp{
+font-size: 0px;
+}
+.head{
+    width:100%;
+    height:1.08rem;
+    background:linear-gradient(to right,#D516FB,#9551F1);
+    position: relative;
+    box-sizing: border-box;
+    padding-top:.31rem;
+}
+.head>.head_nav{
+    width:100%;
+    height:.16rem;
+    line-height: .14rem;
+}
+.head>.head_nav a:first-child{
+    font-size: .24rem;
+    font-weight: 500;
+    font-family: "黑体";
+    float: left;
+    color: #fff;
+    margin-left:.14rem;
+}
+.head>.head_nav a:last-child{
+    float:right;
+    margin:.04rem .14rem 0 0;
+    display:inline-block;
+    width:.16rem;
+    height: .04rem;
+}
+.head>.head_nav a:last-child>img{
+    width:100%;
+    height: 100%;
+}
+.head>.touX{
+width:.58rem;
+height:.58rem;
+position: absolute;
+top:.8rem;
+left:.15rem;
+z-index:111;
+}
+.head>.touX img{
+    width: 100%;
+    height:100%;
+}
+.my_msg{
+    height:1.47rem;
+    border-bottom: .08rem solid #E8E8E8;
+}
+.diwen{
+    position: absolute;
+    top: 0.19rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.diwen>img{
+    width: 0.64rem;
+    height: 0.71rem;
+}
+/* 好友信息 */
+.my_msg .msg-attention{
+    height: .52rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.my_msg .msg-attention>a{
+    display: inline-block;
+    height:.24rem;
+    line-height:.24rem;
+    width: .65rem;
+    border:.01rem solid #5903B0;
+    border-radius: .11rem;
+    box-sizing: border-box;
+    font-size: .13rem;
+    text-align: center;
+    color: #FFFFFF;
+    margin-right:.14rem;
+}
+.my_msg .msg-attention>a:first-child{
+background: #5903B0;
+}
+.my_msg .msg-attention>a:last-child{
+    color:#5903B0;
+    font-weight: bold;
+}
+.vip{
+    height:.18rem;
+    width: 80%;
+    padding-left: .14rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+ .vip span{
+font-size: .14rem;
+color: #333;
+font-weight: bold;
+float: left;
+}
+ .vip img{
+    margin:.04rem 0 0 .14rem;
+    height:.13rem;
+    float: left;  
+}
+.side{
+    font-size: .11rem;
+    color: #999;
+    font-weight: bold;
+    margin:.13rem 0 0 .15rem;
+    letter-spacing: .01rem;
+}
+.hot{
+    width: 100%;
+    display: flex;
+    font-size: 0px;
+    margin-top: .18rem;
+}
+.hot>p{
+    width:33.33%; 
+    font-weight: bold;
+}
+.hot>p span:first-child{
+    font-size:.15rem;
+    color:#333333;
+    margin-left:.14rem;
+  
+}
+.hot>p span:last-child{
+    font-size: .1rem;
+    color: #999999;
+    margin-left:.15rem;
+}
+.hot>p:last-child span:first-child{
+  margin-left: .59rem; 
+}
+.hot>p:last-child span:last-child{
+}
+/* 分页导航 */
+.msg_nav{
+    height:.41rem;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.msg_nav>a{
+    font-size:.15rem;
+    font-weight: bold;
+    width: 50%;
+    height: .41rem;
+    line-height: .41rem;
+    text-align: center;
+}
+.msg_nav .xin{
+    display: inline-block;
+    height:.02rem;
+    width:.14rem;
+    background: #9551F1;
+    border-radius: .02rem;
+    position: absolute;
+    top:.39rem;
+    left:.85rem;
+}
+.msg_list,.msg_list ul{
+    width: 100%;
+    box-sizing: border-box;
+}
+.msg_list ul li{
+    height:.44rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 .14rem;
+    border-top: .01rem solid #E8E8E8;
+    font-weight: bold;
+    overflow: hidden;
+}
+.msg_list ul li>span{
+    font-size: .14rem;
+    color: #333;
+    float: left;
+    display: inline-block;
+    height:.4rem;
+    line-height: .44rem;
+}
+.msg_list ul li>a{
+      float:right;
+      display: inline-block;
+      height:.4rem;
+      width:.42rem;
+      overflow: hidden;
+      margin-right:.05rem;
+}
+.msg_list ul li>a>span:first-child{
+    font-size:.14rem;
+    color: #999999;
+    margin-right:.08rem;
+    margin-top:.1rem;
+    display: inline-block;
+    float: left;
+}
+.msg_list ul li>a>img{
+   width:.07rem;
+   height:.13rem;
+    float: right;
+    margin-top:.14rem;
+}
+.msg_list .dynamic{
+    border-top: .08rem solid #E8E8E8;
+    height:.52rem;
+}
+/* 动态列表 */
+.dynamic-list,.dynamic-list ul{
+width:100%;
+}
+.dynamic-list ul li{
+    height:1.38rem;
+    box-sizing:border-box;
+    border-top: .01rem solid #E8E8E8;
+    padding:.15rem;
+}
+.dy_msg{
+display: flex;
+width:100%;
+}
+.dy_msg>div{
+    width:.37rem;
+    height:.37rem;
+}
+.dy_msg>div>img{
+    width:100%;
+    height:100%;
+}
+.vips>span{
+    font-size:.12rem;
+}
+.vips>img{
+    margin-top:.02rem;
+}
+.dy_msg .dY_my{
+    width:2rem;
+}
+.dY_my .sides{
+   font-size: .11rem;
+    color: #999;
+    font-weight: bold;
+    letter-spacing: .01rem;
+    text-indent:.14rem;
+}
+.my_friend{
+    margin-top:.15rem;
+    width:3.45rem;
+    height:.3rem;
+    background-color: #F8F8F8;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.my_friend>p{
+    font-size:.12rem;
+    color: #999999;
+    font-weight: bold;
+    margin-left:.48rem;
+}
+.my_friend>p>span{
+    color: #5903B0;
+    margin:0 .04rem;
+    font-weight: bold;
+}
+.friend_coul{
+    width:100%;
+}
+.friend_coul>p{
+overflow: hidden;
+height:.2rem;
+margin-top:.15rem;
+}
+.friend_coul>p> .jiayou{
+    float: left;
+    height:.2rem;
+    display: inline-block;
+    overflow: hidden;
+}
+.friend_coul>p>.jiayou img{
+    width:.17rem;
+    height:.17rem;
+    float: left;
+}
+.friend_coul>p>.jiayou >span{
+    font-size:.11rem;
+    color: #999;
+    font-family: pingfang-m;
+    display: inline-block;
+    margin:.02rem 0 0 .15rem;
+    float: left;
+}
+.friend_coul>p>.ping{
+    margin-left:.18rem;
+}
+.friend_coul>p>.xin{
+    margin-left:.16rem;
+}
+.friend_coul>p>.ping img{
+    margin-top:.02rem;
+}
+.friend_coul>p>.fen{
+    float:right;
+     width:.17rem;
+    height:.17rem;
+}
+.friend_coul>p>.fen img{
+    width:100%;
+    height:100%;
+}

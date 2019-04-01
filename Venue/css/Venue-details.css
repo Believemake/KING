@@ -1,0 +1,244 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#box{
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 3.75rem;
+    height: 0.67rem;
+    background: linear-gradient(to right,#D516FB,#9551F1);
+    font-size: 0;
+    overflow: hidden;
+}
+header>p{
+    margin-top: 0.3rem;
+}
+header>p>a{
+    display: inline-block;
+    margin-left: 0.15rem;
+}
+header img{
+    width: 0.08rem;
+    height: 0.16rem;
+}
+header span{
+    font-size: 0.18rem;
+    font-family: pingfang-m;
+    color: #fff;
+    margin-left: 1.29rem;
+}
+/* ****** */
+.venue-title{
+    display: flex;
+    font-size: 0;
+    margin-top: 0.14rem;
+}
+.venue-img{
+    border-radius: 0.1rem;
+    overflow: hidden;
+    margin-left: 0.15rem;
+}
+.venue-img>img{
+    width: 1.26rem;
+    height: 0.9rem;
+}
+.venue-content{
+    font-family: pingfang-m;
+    color: #333333;
+    font-size: 0.14rem;
+    flex-grow: 1;
+    margin-left: 0.16rem;
+    margin-top: 0.05rem;
+}
+.venue-name>img{
+    width: 0.48rem;
+    height: 0.12rem;
+    margin-left: 0.15rem;
+}
+.price{
+    color: #660099;
+}
+.add>img{
+    width: 0.08rem;
+    height: 0.11rem;
+}
+.add>span{
+    font-size: 0.08rem;
+    margin-left: 0.1rem;
+}
+/* ********** */
+.day{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 0.12rem;
+
+}
+.day>ul{
+    margin-left: 0.23rem;
+    font-family: pingfang-m;
+    overflow: hidden;
+    width: 13rem;
+}
+.day>ul>li{
+    width: 0.84rem;
+    height: 0.84rem;
+    box-shadow: 0rem 0.04rem 0.1rem 0.001rem rgba(248, 248, 248, 1);
+    margin-bottom: 0.08rem;
+    border-radius: 0.1rem;
+    font-size: 0.13rem;
+    color: #333333;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+    margin-left: 0.16rem;
+}
+.day>ul>li:first-child{
+    margin-left: 0;
+}
+.day>ul>li>p:first-child{
+    margin-top: 0.12rem;
+}
+.day>ul>li>div{
+    width: 0.45rem;
+    height: 0.16rem;
+    border: 0.01rem solid #660099;
+    border-radius: 0.08rem;
+    line-height: 0.16rem;
+    margin: 0 auto;
+    margin-top: 0.1rem;
+}
+.day>ul>li>div>a{
+    color: #660099;
+    font-family: pingfang-m;
+}
+.location{
+    margin-top: 0.15rem;
+}
+.location>p{
+    color: #333333;
+    font-size: 0.14rem;
+    font-family: pingfang-m;
+    text-indent: 0.15rem;
+}
+.warp{
+    width: 3.45rem;
+    height: 1.43rem;
+    border-radius: 0.1rem;
+    /* background: url('../Venue-details/warp.png') no-repeat; */
+    background-size: 100% 100%;
+    margin: 0.18rem auto;
+    position: relative;
+}
+.warp>img{
+    width: 0.17rem;
+    height: 0.25rem;
+    position: absolute;
+    top: 0.42rem;
+    left: 1.3rem;
+}
+.evaluate{
+    width: 2.98rem;
+    margin-top: 0.07rem;
+}
+.evaluate>p{
+    color: #333333;
+    font-family: pingfang-m;
+    font-size: 0.14rem;
+    text-indent: 0.15rem;
+}
+.user{
+    font-size: 0;
+    display: flex;
+    margin-top: 0.13rem;
+    margin-left: 0.15rem;
+}
+.user-img>img{
+    width: 0.4rem;
+    height: 0.4rem;
+}
+.user-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name{
+    color: #333333;
+    font-size: 0.13rem;
+    font-family: pingfang-m;
+}
+.time{
+    color: #333333;
+    font-size: 0.08rem;
+    font-family: pingfang-m;
+}
+.eva-text{
+    margin-top: 0.06rem;
+    margin-left: 0.16rem;
+    font-size: 0;
+}
+.eva-text>p{
+    color: #333333;
+    font-size: 0.13rem;
+    font-family: pingfang-m;
+}
+.eva-text>span>a{
+    display: inline-block;
+    color: #660099;
+    font-size: 0.13rem;
+    font-family: pingfang-m;
+    margin-top: 0.05rem;
+    margin-bottom: 0.1rem;
+}
+
+footer{
+    width: 100%;
+    height: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+.serve{
+    display: flex;
+    flex-grow: 1;
+}
+.serve>div:first-child{
+    margin-left: 0.39rem;
+}
+.serve>div:first-child>a>img{
+    width: 0.22rem;
+    height: 0.22rem;
+}
+.serve>div>a>p{
+    font-size: 0.11rem;
+    font-family: pingfang-m;
+}
+.serve>div:last-child{
+    margin-left: 0.3rem;
+}
+.serve>div:last-child>a>img{
+    width: 0.22rem;
+    height: 0.22rem;
+}
+.join{
+    flex-grow: 1;
+}
+.join>div{
+    width: 1.4rem;
+    height: 0.37rem;
+    background: #5905b2;
+    border-radius: 0.1rem;
+    text-align: center;
+    line-height: 0.37rem;
+    margin-left: 0.8rem;
+}
+.join>div>a{
+    color: #fff;
+    font-size: 0.13rem;
+    font-family: pingfang-m;
+}

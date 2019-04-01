@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 3.75rem;
+    height: 2.3rem;
+    background: url('../img/img_2.png') no-repeat;
+    background-size: 100%;
+}
+header img{
+    width: 0.08rem;
+    height: 0.15rem;
+}
+header>a{
+    display: inline-block;
+    margin-top: 0.34rem;
+    margin-left: 0.15rem;
+}
+a{
+    text-decoration: none;
+}
+.price{
+    background: #fff;
+    margin-top:-0.03rem;
+    padding: 0 0.15rem;
+    overflow: hidden;
+}
+.price p:first-of-type{
+    font-size: 0.15rem;
+    color: #660099;
+    margin-top: 0.07rem;
+}
+.price p:first-of-type span{
+    font-size: 0.11rem;
+}
+.price p:nth-of-type(2){
+    color: #cccccc;
+    font-size: 0.11rem;
+    text-decoration: line-through;
+
+}
+.price .share{
+    overflow: hidden;
+
+}
+.price .share p{
+    width: 2.85rem;
+    font-size: 0.14rem;
+    color: #000;
+    float: left;
+}
+.price .share .share_1{
+    float: right;
+    position: relative;
+    top: 0.08rem;
+}
+.price .share .share_1 span{
+    position: absolute;
+    color: #fff;
+    font-size: 0.12rem;
+    padding-left: 0.19rem;
+    line-height: 0.19rem;
+    background: url("../img/5@2x.png") no-repeat 0.04rem;
+    background-size: 0.12rem 0.13rem;
+    display: inline-block;
+}
+.price .share .share_1 img{
+    width: 0.46rem;
+    height: 0.2rem;
+}
+.price .three_3{
+    color: #ccc;
+    font-size: 0.11rem;
+    margin-top: 0.06rem;
+    margin-bottom: 0.03rem;
+}
+.price .three_3 span:nth-of-type(2){
+    margin-left: 0.8rem;
+}
+.price .three_3 span:nth-of-type(3){
+    margin-left: 0.8rem;
+}
+.icon{
+    background: #fff;
+    height: 0.35rem;
+    line-height: 0.35rem;
+    padding: 0 0.15rem;
+    overflow: hidden;
+}
+.icon>img{
+    width: 0.25rem;
+    height: 0.27rem;
+    float: left;
+    margin-top: 0.045rem;
+}
+.icon span:first-of-type{
+    color: #ccc;
+    font-size: 0.11rem;
+    margin-left: 0.15rem;
+}
+.icon span:last-of-type{
+    float: right;
+    font-size: 0.12rem;
+}
+.assess{
+    margin-top: 0.08rem;
+    background: #fff;
+    padding: 0 0.15rem;
+}
+.assess p:first-of-type{
+    font-size: 0.12rem;
+    color: #660099;
+    overflow: hidden;
+    padding-top: 0.07rem;
+}
+.assess p:first-of-type img{
+    width: 0.08rem;
+    height: 0.15rem;
+    float: right;
+    margin-right: 0.04rem;
+}
+.assess p:nth-of-type(2){
+    font-size: 0.12rem;
+    color: #660099;
+    overflow: hidden;
+    margin-top: 0.06rem;
+}
+.assess p:nth-of-type(2) img{
+    width: 0.15rem;
+    height: 0.08rem;
+    float: right;
+}
+.assess p:nth-of-type(3){
+    text-align: center;
+    font-size: 0.15rem;
+    color: #660099;
+    margin-top: 0.26rem;
+}
+.assess>img{
+    width: 2.98rem;
+    height: 1.25rem;
+    margin-left: 0.25rem;
+    margin-top: 0.04rem;
+}
+.add{
+    overflow: hidden;
+    padding-bottom: 0.05rem;
+}
+.add>img{
+    float: left;
+    width: 0.21rem;
+    height: 0.18rem;
+    margin-left: 0.35rem;
+    margin-top: 0.15rem;
+}
+.add span:first-of-type{
+    display: inline-block;
+    padding: 0.26rem 0.02rem 0 0.02rem;
+    margin-top: 0.08rem;
+    font-size: 0.11rem;
+    color: #999999;
+    margin-left: 0.3rem;
+    background: url("../img/12@2x (1).png") no-repeat;
+    background-size: 0.23rem 0.23rem;
+}
+.add span:nth-of-type(2){
+    display: inline-block;
+    padding: 0.26rem 0.02rem 0 0.02rem;
+    margin-top: 0.08rem;
+    font-size: 0.11rem;
+    color: #999999;
+    margin-left: 0.25rem;
+    background: url("../img/12@2x (2).png") no-repeat;
+    background-size: 0.23rem 0.23rem;
+}
+.add span:nth-of-type(3){
+    float: right;
+    display: inline-block;
+    font-size: 0.13rem;
+    color: #fff;
+    width: 1.4rem;
+    height: 0.37rem;
+    line-height: 0.37rem;
+    text-align: center;
+    background: url("../img/12@2x (4).png") no-repeat center center;
+    background-size: 1.4rem 0.37rem;
+    margin-top: 0.06rem;
+}
+
+
+
+
+
+
+
+
+
+
+

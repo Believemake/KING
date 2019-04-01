@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录页</title>
+    <link rel="stylesheet" href="../css/res.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="warp">
+        <header class="head_nav">
+            <a href="./login.html">
+                <</a> <span>QQ登录</span>
+                    <a href="#">
+                        切换账号
+                    </a>
+        </header>
+        <div class="logo logos">
+            <img src="login-img/jingg.png" alt="">
+        </div>
+        <div class="king">
+            <img src="login-img/KING@2x.png" alt="">
+        </div>
+        <div class="logins_qq">
+            <div class="myQQ">
+                <div class="mytou">
+                    <img src="login-img/touxiang.png" alt="">
+                </div>
+                <div class="my_msg">
+                    <p>jjssshin(15824849123)</p>
+                    <p>你已成功对该应用授权</p>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn_qq">登录</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/zepto.js"></script>
+<script src="../js/zepto.touch.js"></script>
+<script src="../js/rem.js"></script>
+<script>
+    $('.btn_qq').tap(function () {
+        window.location.href = '../index.html';
+    })
+</script>
+
+</html>
